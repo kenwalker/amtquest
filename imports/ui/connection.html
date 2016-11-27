@@ -1,0 +1,9 @@
+<template name="connection">
+  <li>
+    {{#if isOwner}}
+    	<button class="delete">&times;</button>
+	{{/if}}
+ 
+	<span class="text">Battery strength: {{battery}}</span>
+  </li>
+</template>

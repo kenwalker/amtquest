@@ -1,0 +1,20 @@
+<template name="park">
+	{{#if HasHeraldry}}
+		<img src="https://amtgard.com/ork/assets/heraldry/park/{{zeroPad ParkId 5}}.jpg">
+	{{/if}}
+	{{#if amtquestConfirmed}}
+		<img src="images/chest-checkmark.png">
+	{{/if}}
+	<br>
+	{{#if hasUrl}}
+		<a target="_blank" href="{{formattedUrl}}">
+			{{fancyName}}
+		</a>
+	{{else}}
+		{{fancyName}}
+	{{/if}}
+	<br>
+	{{KingdomName}}
+	<br>
+	<a target="_blank" href="https://amtgard.com/ork/orkui/index.php?Route=Park/index/{{ParkId}}">ORK Link</a>
+</template>

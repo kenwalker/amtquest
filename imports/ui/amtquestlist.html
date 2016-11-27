@@ -1,0 +1,23 @@
+<template name="amtquestlist">
+	<li class="amtquestlistitem">
+	{{#if knownLocation}}
+		{{#if isEvent}}
+			<img src="images/event.png">
+		{{else}}
+			<img src="https://amtgard.com/ork/assets/heraldry/park/{{zeroPad parkID 5}}.jpg">
+		{{/if}}
+	{{else}}
+		<img src="images/chest-add.png">
+	{{/if}}
+	{{tagDate}}
+	{{#if knownLocation}}
+		{{#if park_id}}
+			{{name}}
+		{{else}}
+			{{name}}
+		{{/if}}
+	{{else}}
+		Unknown event
+	{{/if}}
+	</li>
+</template>

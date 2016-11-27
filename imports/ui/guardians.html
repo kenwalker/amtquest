@@ -1,0 +1,51 @@
+<template name="guardians">
+    <div id="main">
+    <div id="Guardians">
+        <div class="header">
+        <h2>Guardians</h2>
+        </div>
+        <div class="content">
+			<div class="pure-g">
+				<div class="pure-u-1">
+					<p>
+						Current Guardian<br>
+						{{guardianName}}<br>
+						Possession since {{guardianDate}}
+					</p>
+
+				    <p> If you have been given the AmtQuest chest for delivery or safekeeping, please
+				    claim it here</p>
+					{{#if userLoggedIn}}
+
+						<p><button class="pure-button pure-button-active claimguardianship {{buttonStateForUser}}">Claim Guardianship</button></p>
+					{{else}}
+						<p>Login to claim AmtQuest chest guardianship</p>
+						<p>{{> loginButtons}}</p>
+					{{/if}}
+				</div>
+			</div>
+
+            <div class="past-guardians-list">
+				<h2 class="content-subhead">Past Guardians</h2>
+				<table class="pure-table pure-table-horizontal">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Date Aquired</th>
+						</tr>
+					</thead>
+
+					<tbody>
+				    {{#each guardians}}
+						<tr>
+							<td>{{name}}</td>
+							<td>{{formatedDate createdAt}}</td>
+						</tr>
+				    {{/each}}
+				    </tbody>
+				</table>
+            </div>
+        </div>
+    </div>
+    </div>
+</template>

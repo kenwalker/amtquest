@@ -1,0 +1,23 @@
+<template name="amtquest">
+	{{#if knownLocation}}
+		<img src="images/chest-checkmark.png">
+		<br>
+		{{#if park_id}}
+			{{name}}
+		{{else}}
+			{{name}}
+		{{/if}}
+	{{else}}
+		<img src="images/chest-add.png">
+		<br>
+		This is an unknown park or event
+		<br>
+		{{#if userLoggedIn}}
+		<input type="button" value="Click to edit">
+		{{else}}
+		<i>Sign in to edit it</i>
+		{{/if}}
+	{{/if}}
+	<br>
+	{{tagDate}}
+</template>
