@@ -24,18 +24,23 @@
               </center>
               </div>
             </div>
-
 <!--             <p>
             <center>
               <h2 class="content-subhead">AmtQuest Tags</h2>
             </center>
             </p>
- -->            <div>
+ -->
+            <div>
               <ul class="listofamtquests">
                 {{#each amtquests}}
                   {{> amtquestlist}}
                 {{/each}}
               </ul>
+            </div>
+            <div class="pure-g">
+              <div class="pure-u-1">
+                <center>AmtQuest has travelled {{distance}} Km</center>
+              </div>
             </div>
         </div>
     </div>
